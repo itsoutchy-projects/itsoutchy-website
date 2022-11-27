@@ -1,0 +1,117 @@
+a {
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: large;
+}
+
+.links {
+    background-color: rgba(0, 0, 0, 0.496);
+    /*margin-bottom: 10px;*/
+    position:fixed;
+}
+
+#softare-dev, #gamedev, #art-practicing, #animation {
+    background-color: rgba(0, 0, 0, 0.492);
+    display: flex;
+    justify-content: center;
+    margin-bottom: 5px;
+    border-radius: 10%;
+    width: fit-content;
+    border: 1px solid rgb(255, 255, 255);
+}
+
+#softare-dev:hover, #gamedev:hover, #art-practicing:hover, #animation:hover {
+    background-color: rgba(0, 0, 0, 0.901);
+}
+
+#good-at {
+    display: block;
+    justify-content: center;
+    margin-top: 200px;
+}
+
+#good-at-link {
+    margin-right: 20px;
+}
+
+#animations, #games {
+    background-color: rgba(0, 0, 0, 0.492);
+    margin-top: 100px;
+    display: block;
+}
+
+#animations>iframe, #games>iframe {
+    margin: 10px;
+}
+
+#practicing {
+    display: block;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+#software-dev-content, #gamedev-content, #art-practicing-content, #animation-content {
+    display: block;
+}
+
+#stickfigure-wrapper {
+    position: fixed;
+}
+
+#stickfigure {
+    position:absolute;
+    bottom:0;
+    right:0;
+    background-image: url("images/stickfigure.png");
+    size: 100;
+}
+
+#home-link-inner {
+    display: inline-block;
+    margin-right: 300px;
+    margin-left: 30px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-weight: 900;
+}
+
+p, h1, h2, h3 {
+    color: white;
+}
+
+#name {
+    text-align: center;
+}
+
+.inline-link {
+    text-decoration: underline;
+}
+
+/* .about-me {
+    visibility: hidden;
+} */
+
+/* .about-me::after {
+    content: "<h3> \n \t Hi, I'm a computer enthusiast, I've made games, apps, websites, animations and more!";
+} */
+
+.bio {
+    display: flex;
+    justify-content: center;
+    size: 50;
+    /* margin-top: 10px; */
+}
+
+a:hover {
+    font-weight: bolder;
+    font-style: italic;
+}
+
+body {
+    font-family: monospace;
+    margin: 0;
+    background-image: url("images/background.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
