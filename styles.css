@@ -1,5 +1,4 @@
 a {
-    display: block;
     color: white;
     font-weight: bold;
     text-decoration: none;
@@ -107,7 +106,6 @@ p, h1, h2, h3 {
 a:hover {
     font-weight: bolder;
     font-style: italic;
-    background-color: grey;
 }
 
 body {
