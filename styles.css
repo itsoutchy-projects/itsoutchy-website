@@ -35,7 +35,7 @@ a {
     margin-right: 20px;
 }
 
-#animations, #games {
+#animations, #games, #whyStart, #webgames {
     background-color: rgba(0, 0, 0, 0.492);
     margin-top: 100px;
     display: block;
@@ -114,4 +114,23 @@ body {
     background-image: url("images/background.png");
     background-repeat: no-repeat;
     background-size: cover;
+}
+
+button {
+    color: white;
+    background-color: black;
+    border: 1px solid white;
+    border-radius: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    cursor: pointer;
+    transition: background-color 0.4s, color 0.4s;
+}
+
+button:hover {
+    color: black;
+    background-color: white;
+    border: 1px solid black;
 }
