@@ -13,6 +13,7 @@ var languages = [
     "svg"
 ]
 var randomNumber = Math.floor((Math.random() * 9) + 1);
+var lengthText = document.getElementById("text-input-length");
 fetch("https://wordle-answers-solutions.p.rapidapi.com/today?rapidapi-key=f2d217ced3msh1f989cd33bf7767p1226afjsne808b7cb332f").then(function(value) {
     // I swear the stupid Promise<string> thing it was returning was making me rage >:(
     // Fix the types people! Stop returning pointless wrappers for other types when the obvious better method is actually returning said object without any wrappers
@@ -27,6 +28,7 @@ fetch("https://wordle-answers-solutions.p.rapidapi.com/today?rapidapi-key=f2d217
         function check() {
             // Performance would be sacrificed if this if didn't exist
             if (textInput.value != current_cached_text) {
+                lengthText.innerText = textInput.value.length;
                 // This tells you if your text is correct or is wrong, if it's wrong, it tells you what's wrong
                 var note = document.getElementById("note");
 
@@ -116,9 +118,17 @@ fetch("https://wordle-answers-solutions.p.rapidapi.com/today?rapidapi-key=f2d217
                     }
                 }
 
+                if (!textInput.value.includes(textInput.value.length.toString())) {
+                    if (note.innerText != "" || note.innerText != null) {
+                        note.innerText = "Your text must contain the length of your text";
+                    } else {
+                        note.innerText = note.innerText + "\nYour text must contain the length of your text";
+                    }
+                }
+
                 // We have the wordle answer in there, so we update the note, telling the player that their text meets our standards
                 // This if is getting filled with conditions so we might need to split it up soon
-                if (textInput.value.includes(today_wordle_answer) && textInput.value.includes("@") && textInput.value.includes("🔴⚠️") && textInput.value.includes("®") && textInput.value.length > 8 && textInput.value.includes("#") && detectedLanguageName && containsNumber(textInput.value) && textInput.value.includes(randomNumber.toString())) {
+                if (textInput.value.includes(today_wordle_answer) && textInput.value.includes("@") && textInput.value.includes("🔴⚠️") && textInput.value.includes("®") && textInput.value.length > 8 && textInput.value.includes("#") && detectedLanguageName && containsNumber(textInput.value) && textInput.value.includes(randomNumber.toString()) && textInput.value.includes(textInput.value.length.toString())) {
                     note.innerText = "Lookin' good!";
                     console.log("Good");
                 }
