@@ -6,3 +6,15 @@
     border-radius: 10px;
     color: white;
 }
+
+#text-input, #text-input-length {
+    display: inline-flex;
+}
+
+#text-input-length {
+    vertical-align: middle;
+}
+
+/* #text-input-area {
+    display:flex;
+} */
