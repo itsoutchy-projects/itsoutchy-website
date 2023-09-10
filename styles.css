@@ -5,10 +5,15 @@ a {
     font-size: large;
 }
 
+main {
+    padding-top: 25px;
+}
+
 .links {
     background-color: rgba(0, 0, 0, 0.496);
     /*margin-bottom: 10px;*/
     position:fixed;
+    width: 100vw;
 }
 
 #softare-dev, #gamedev, #art-practicing, #animation {
