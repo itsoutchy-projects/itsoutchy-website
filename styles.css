@@ -1,0 +1,80 @@
+:root {
+    --font-colour: white;
+    --background-colour: rgb(2, 5, 31);
+    --body-margin: 50px;
+}
+
+.dropShadow-1 {
+    text-shadow: var(--font-colour) 1px 1px 1px;
+}
+
+@media (prefers-color-scheme: light) {
+    :root {
+        --font-colour: rgb(0, 0, 0);
+        --background-colour: rgb(255, 250, 250);
+    }
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    background-color: var(--background-colour);
+    color: var(--font-colour);
+    overflow-x: hidden;
+}
+
+.rounded-1 {
+    border-radius: 5px;
+}
+
+.rounded-2 {
+    border-radius: 10px;
+}
+
+.screenshot-1 {
+    width: 100vw;
+    text-align: left;
+}
+
+.screenshot-2 {
+    width: 98vw;
+    text-align: right;
+}
+
+#downloadBttn {
+    transition: all 0.5s ease-in-out;
+    padding: 20px;
+    font-size: large;
+    background-color: rgb(97, 141, 30);
+    color: white;
+    border: 2px solid rgb(80, 117, 25);
+    cursor: pointer;
+}
+
+#downloadBttn:hover {
+    padding-left: 30px;
+    padding-right: 30px;
+    background-color: rgb(74, 108, 22);
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+}
+  
+/* Track */
+::-webkit-scrollbar-track {
+    background-color: inherit;
+    opacity: 0%;
+}
+  
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #88888877;
+    opacity: 50%;
+}
+  
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #55555575;
+}
